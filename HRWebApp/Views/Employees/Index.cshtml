@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Employee>
+@{
+    ViewData["Title"] = $"Employees ({Model.Count()})";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Employee employee in Model)
+        {
+            <tr>
+                <td>@employee.Name</td>
+                <td>@employee.Salary</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
